@@ -1,0 +1,14 @@
+*/
+.*history*
+.bash_logout
+.sudo_as_admin_successful
+.ICEauthority
+.dmrc
+.inputrc
+.multirust
+.netrc
+.nvidia-settings-rc
+.pam_environment
+.viminfo
+.wget-hsts
+.xinputrc

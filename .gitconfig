@@ -1,0 +1,20 @@
+[user]
+	name = Dmitry Vorotilin
+	email = d.vorotilin@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+[push]
+	default = simple
+[color]
+	ui = true
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+	rb = rebase
+	pl = pull
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%cn%Creset %s %Cgreen(%ci)%Creset' --abbrev-commit  --date=relative
