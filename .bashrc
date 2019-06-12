@@ -146,6 +146,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # Binstubs
 export PATH="./bin:$PATH"
 
+# Node
+export PATH="./node_modules/.bin:$PATH"
+
 # Bundle
 alias be="bundle exec"
 alias bo="bundle open"
