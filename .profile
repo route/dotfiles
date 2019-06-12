@@ -32,6 +32,9 @@ export RUBY_CONFIGURE_OPTS="--disable-install-doc"
 # Binstubs
 export PATH="./bin:$PATH"
 
+# Node
+export PATH="./node_modules/.bin:$PATH"
+
 # Bundle
 alias b="bundle"
 alias be="bundle exec"
