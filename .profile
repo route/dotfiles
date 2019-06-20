@@ -72,6 +72,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 # Postgres
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 
 # Machinio
 heroku_psql() {
