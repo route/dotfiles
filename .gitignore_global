@@ -38,6 +38,11 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
+# Editors #
+######################
+.idea
+.vscode
+
 *~
 .vagrant
 *.swp
