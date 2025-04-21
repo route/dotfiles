@@ -94,7 +94,6 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 # Postgres
 export PATH="$(brew --prefix postgresql@13)/bin:$PATH"
-export GEOS_LIBRARY_PATH="$(brew --prefix geos)/lib/libgeos_c.1.dylib"
 
 # Node
 export PATH="./node_modules/.bin:$PATH"
