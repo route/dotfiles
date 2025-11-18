@@ -13,11 +13,13 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ll="ls -alFh"
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -f "/opt/homebrew/bin/brew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Default editor
 export EDITOR="vim"
-export VISUAL="code"
+export VISUAL="zed"
 # Open with `e` alias any folder or current dir by default in editor
 e() {
   if [ -z "$1" ]; then
@@ -40,7 +42,9 @@ export PATH="./bin:$PATH"
 # Python
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/Python/3.12/bin:$PATH"
-export PATH=$(brew --prefix python)/libexec/bin:$PATH
+if type brew > /dev/null 2>&1; then
+  export PATH=$(brew --prefix python)/libexec/bin:$PATH
+fi
 
 # Bundle
 alias b="bundle"
@@ -93,7 +97,9 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # Postgres
-export PATH="$(brew --prefix postgresql@13)/bin:$PATH"
+if type brew > /dev/null 2>&1; then
+  export PATH="$(brew --prefix postgresql@13)/bin:$PATH"
+fi
 
 # Node
 export PATH="./node_modules/.bin:$PATH"
@@ -105,7 +111,7 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 # Rust
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then "$HOME/.cargo/env"; fi
 
 # Terraform
 # export PATH="$PATH:/opt/terraform"
