@@ -111,7 +111,7 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 # Rust
-if [ -f "$HOME/.cargo/env" ]; then "$HOME/.cargo/env"; fi
+if [ -f "$HOME/.cargo/env" ]; then source "$HOME/.cargo/env"; fi
 
 # Terraform
 # export PATH="$PATH:/opt/terraform"
